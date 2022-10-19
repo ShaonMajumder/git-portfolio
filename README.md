@@ -1,4 +1,4 @@
-### Git Portfolio
+### Github Portfolio
 - https://github.com/Taabannn/awesome-github-profile-readme-templates
 - https://github.com/CodeWhiteWeb/CodeWhiteWeb
 - https://github.com/Neutron-Creative/Beautiful-FOSS
