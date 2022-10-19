@@ -1,3 +1,6 @@
+### Cheatsheet
+https://wordpress.com/support/markdown-quick-reference/
+
 ### Search Term
 github landing page readme developer template
 
