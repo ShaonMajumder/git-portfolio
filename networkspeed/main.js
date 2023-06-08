@@ -1,13 +1,21 @@
 const http = require('http');
+const https = require('https');
 const { promisify } = require('util');
+const url = require('url');
 
 class SpeedTest {
-  constructor(serverUrl = 'http://speedtest.net/speedtest/random350x350.jpg') {
+  constructor(serverUrl = 'https://s2.ax1x.com/2019/08/13/mPJ2iq.jpg') {
     this.serverUrl = serverUrl;
     this.downloadDataSize = 1024 * 1024 * 10; // 10MB
     this.uploadDataSize = 1024 * 1024 * 5; // 5MB
 
-    this.httpGet = promisify(http.get);
+    this.httpGet = promisify(this.getRequestModule().get);
+  }
+
+  getRequestModule() {
+    const serverProtocol = url.parse(this.serverUrl).protocol;
+
+    return serverProtocol === 'https:' ? https : http;
   }
 
   async startTest() {
